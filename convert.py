@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 
 import sys
+import textwrap
 
 import oyaml as yaml
 from collections import OrderedDict
@@ -20,10 +21,11 @@ for i in x:
         secrets = i
 
 for i in secrets['external_data']:
-    print('---')
-    print('kind: secret')
-    print('name:', i)
-    print('get:')
-    print("  path:", secrets['external_data'][i]['path'])
-    print("  name:", i)
-    print()
+    secret = """
+        ---
+        kind: secret
+        name: %s
+        get:
+          path: %s
+          name: %s""" % (i, secrets['external_data'][i]['path'], i)
+    print(textwrap.dedent(secret))
