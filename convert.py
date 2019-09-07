@@ -27,5 +27,6 @@ for i in secrets['external_data']:
         name: %s
         get:
           path: %s
-          name: %s""" % (i, secrets['external_data'][i]['path'], i)
-    print(textwrap.dedent(secret))
+          name: %s
+    """ % (i, secrets['external_data'][i]['path'], i)
+    print(textwrap.dedent(secret).strip())
