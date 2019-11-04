@@ -26,6 +26,5 @@ for i in secrets['external_data']:
         kind: secret
         name: %s
         get:
-          path: %s
-          name: %s""" % (i, secrets['external_data'][i]['path'], i)
+          path: %s""" % (i, secrets['external_data'][i]['path'])
     print(textwrap.dedent(secret))
