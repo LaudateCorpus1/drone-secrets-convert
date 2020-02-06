@@ -11,3 +11,15 @@ optional arguments:
   -h, --help      show this help message and exit
   -c, --complete  Return the complete YAML, not just the secrets
 ```
+
+# Run via Docker
+
+``bash
+$ docker run -v .drone.yml:/drone.yaml viant/drone-secrets-convert
+```
+
+Or
+
+``bash
+$ docker run -v .drone.yml:/drone.yaml viant/drone-secrets-convert convert -c
+```

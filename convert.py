@@ -16,6 +16,8 @@ class DroneSecretsConvert:
         if drone_file is None:
             raise Exception("Keyword drone_file required")
 
+        yaml.warnings({'YAMLLoadWarning': False})
+
         try:
             f = open(drone_file).read()
             self.yaml_data = list((yaml.load_all(f)))
