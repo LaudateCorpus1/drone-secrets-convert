@@ -21,6 +21,6 @@ $ docker run -v .drone.yml:/drone.yaml viant/drone-secrets-convert:latest
 
 Or
 
-``bash
+```bash
 $ docker run -v .drone.yml:/drone.yaml viant/drone-secrets-convert:latest convert -c
 ```
