@@ -14,7 +14,7 @@ optional arguments:
 
 # Run via Docker
 
-``bash
+```bash
 $ docker pull viant/drone-secrets-convert:latest
 $ docker run -v .drone.yml:/drone.yaml viant/drone-secrets-convert:latest
 ```
