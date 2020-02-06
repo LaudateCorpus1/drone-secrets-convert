@@ -15,11 +15,12 @@ optional arguments:
 # Run via Docker
 
 ``bash
-$ docker run -v .drone.yml:/drone.yaml viant/drone-secrets-convert
+$ docker pull viant/drone-secrets-convert:latest
+$ docker run -v .drone.yml:/drone.yaml viant/drone-secrets-convert:latest
 ```
 
 Or
 
 ``bash
-$ docker run -v .drone.yml:/drone.yaml viant/drone-secrets-convert convert -c
+$ docker run -v .drone.yml:/drone.yaml viant/drone-secrets-convert:latest convert -c
 ```
